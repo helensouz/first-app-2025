@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { HeaderCompontent } from './header.component';
 
 @Component({
   selector: 'app-root',
@@ -9,5 +10,5 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'first-app-2025';
+
 }
