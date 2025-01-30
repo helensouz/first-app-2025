@@ -12,10 +12,10 @@ const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
   styleUrl: './user.component.scss'
 })
 export class UserComponent {
-  // @Input({required: true}) avatar!: string;
-  // @Input({required: true}) name!: string;
-  avatar = input.required<string>() // input is a function, <> defined which value will be used
-  name = input.required<string>()
+   @Input({required: true}) avatar!: string;
+   @Input({required: true}) name!: string;
+  // avatar = input.required<string>() // input is a function, <> defined which value will be used
+  // name = input.required<string>()
   // they only changes if the values changes
 
   imagePath = computed(() => { // only will be recompute only when the avatar value changed
