@@ -25,6 +25,10 @@ export class UserComponent {
   })
 
 
+  getSelectedUser(selectedUserid: string){
+    DUMMY_USERS.find(user => user.id === selectedUserid)!
+  }
+
   onSelectUser(){
     this.select.emit(this.id)
 
