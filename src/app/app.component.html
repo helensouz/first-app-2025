@@ -3,14 +3,14 @@
 <main>
   <ul id="users">
      @for(user of users; track user.id) {
-      <li *ngFor="let user of users">
-        <app-user [user]="user" (select)="onSelectUser($event)"/>
+      <li>
+        <app-user [selected]="user.id === selectedUserid" [user]="user" (select)="onSelectUser($event)"/>
       </li>
      }
   </ul>
 
   @if(selectedUser) {
-    <app-tasks [name]="selectedUser ? selectedUser.name : ''"></app-tasks>
+    <app-tasks [userId]="selectedUser.id" [name]="selectedUser.name"></app-tasks>
   }@else {
     <p id="fallback">Please select a user</p>
   }

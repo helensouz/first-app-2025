@@ -11,7 +11,7 @@ import { NgFor, NgIf } from '@angular/common';
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  imports: [HeaderCompontent, UserComponent, TasksComponent, NgFor, NgIf],
+  imports: [HeaderCompontent, UserComponent, TasksComponent],
 
 })
 export class AppComponent {

@@ -1,21 +1,11 @@
 import { Component , computed, Input, input, signal, Output, EventEmitter, output} from '@angular/core';
 
 import { DUMMY_USERS } from '../dummy-users';
+import { type User } from './user.model';
+
 
 const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
 
-
-// type User = {
-//   id: string;
-//   name: string;
-//   avatar: string;
-// }
-
-interface User {
-  id: string;
-  name: string;
-  avatar: string;
-}
 
 @Component({
   selector: 'app-user',
@@ -27,14 +17,15 @@ interface User {
 export class UserComponent {
 
   @Input({required: true}) user!: User
+  @Input({required: true}) selected!: boolean;
+  @Output() select = new EventEmitter()
 
-  select = output<string>();
 
 
+  get imagePath(){
+     return  `./assets/${this.user.avatar}`
+  }
 
-  imagePath = computed(() => { // only will be recompute only when the avatar value changed
-    return  `./assets/${this.user.avatar}`
-  })
 
 
   getSelectedUser(selectedUserid: string){
