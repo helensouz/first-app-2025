@@ -43,4 +43,7 @@ export class TasksComponent {
   }
   //checker if the userId is equal to the selected user id
 
+  onCompleteTask(id: string){
+    this.tasks = this.tasks.filter((task) => task.id !== id)
+  }
 }
