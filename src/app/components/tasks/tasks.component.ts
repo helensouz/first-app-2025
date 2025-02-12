@@ -12,6 +12,8 @@ import { NewTaskComponent } from "../../tasks/new-task/new-task.component";
 export class TasksComponent {
   @Input({required: true}) userId!: string
   @Input({required: true}) name?: string;
+
+
   isAddingTask = false;
 
 
@@ -54,4 +56,6 @@ onStartAddTask() {
   onCompleteTask(id: string){
     this.tasks = this.tasks.filter((task) => task.id !== id)
   }
+
+
 }
