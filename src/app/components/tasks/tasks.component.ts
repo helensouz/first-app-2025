@@ -1,3 +1,4 @@
+
 import { Component, Input } from '@angular/core';
 import { TaskComponent } from "../../task/task.component";
 import { NewTaskComponent } from "../../tasks/new-task/new-task.component";
@@ -58,6 +59,8 @@ onStartAddTask() {
   onCancelAddTask (){
     this.isAddingTask = false
   }
+
+AddNewUser(){}
 
 
 }
