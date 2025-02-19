@@ -5,7 +5,7 @@ Input
 
 
 TaskComponent -- Input
-I've created @Input with values with values ​​within a list
+I've created @Input  with values ​​within a list
 
 ```
  @Input({required: true}) TaskList?: Task[];
