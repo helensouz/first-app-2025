@@ -2,17 +2,25 @@
 import { Component, Input } from '@angular/core';
 import { TaskComponent } from "../../task/task.component";
 import { NewTaskComponent } from "../../tasks/new-task/new-task.component";
+import { Task } from '../../task/task.model';
 
 @Component({
   selector: 'app-tasks',
   standalone: true,
-  imports: [TaskComponent, NewTaskComponent],
+  imports: [TaskComponent],
   templateUrl: './tasks.component.html',
   styleUrl: './tasks.component.scss'
 })
 export class TasksComponent {
   @Input({required: true}) userId!: string
   @Input({required: true}) name?: string;
+
+
+  // The value is required, so the TaskList is not optional
+  // TaskList is an array of Task objects
+
+  @Input({required: true}) TaskList?: Task[];
+
   isAddingTask = false
 
 onStartAddTask() {
