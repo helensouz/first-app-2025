@@ -7,13 +7,15 @@ import { DUMMY_USERS } from './components/dummy-users';
 import { TasksComponent } from "./components/tasks/tasks.component";
 import { NgFor, NgIf } from '@angular/common';
 import { Task } from './task/task.model';
+import { UserListComponent } from "./user-list/user-list.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  imports: [HeaderCompontent, UserComponent, TasksComponent],
+  imports: [UserListComponent]
+  // imports: [HeaderCompontent, UserComponent, TasksComponent, UserListComponent],
 
 })
 export class AppComponent {
