@@ -20,12 +20,9 @@ export class UserComponent {
   @Input({required: true}) selected!: boolean;
   @Output() select = new EventEmitter()
 
-
-
   get imagePath(){
      return  `./assets/${this.user.avatar}`
   }
-
 
 
   getSelectedUser(selectedUserid: string){

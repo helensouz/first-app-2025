@@ -8,13 +8,16 @@ import { TasksComponent } from "./components/tasks/tasks.component";
 import { NgFor, NgIf } from '@angular/common';
 import { Task } from './task/task.model';
 import { UserListComponent } from "./user-list/user-list.component";
+import { UserService } from './components/services/user.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
-  imports: [UserListComponent]
+  imports: [ HttpClientModule, UserComponent, TasksComponent, HeaderCompontent],
+  providers: [UserService],
   // imports: [HeaderCompontent, UserComponent, TasksComponent, UserListComponent],
 
 })
